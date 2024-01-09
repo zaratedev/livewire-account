@@ -24,6 +24,7 @@ class UpdateUser extends Component
     protected $rules = [
         'name' => 'required|between:2,255',
         'phone' => 'digits:10',
+        'birthday' => 'nullable|date',
     ];
 
     public function mount()
@@ -34,6 +35,7 @@ class UpdateUser extends Component
         $this->name = $user->name;
         $this->email = $user->email;
         $this->phone = $user->phone;
+        $this->birthday = optional($user->birthday)->format('Y-m-d');
     }
 
     /**
@@ -52,6 +54,15 @@ class UpdateUser extends Component
     {
         $this->togglePhone = true;
         $this->dispatch('phone');
+    }
+
+    /**
+     * Enable input for edit phone.
+     */
+    public function editBirthday()
+    {
+        $this->toggleBirthday = true;
+        $this->dispatch('birthday');
     }
 
     /**
@@ -79,6 +90,19 @@ class UpdateUser extends Component
         $this->user->update(['phone' => $this->phone]);
 
         $this->reset('togglePhone');
+
+        session()->flash('message', 'Has been updated phone successfull.');
+    }
+
+    public function updateBirthday()
+    {
+        $this->validateOnly('birthday');
+
+        $this->user->update([
+            'birthday' => $this->birthday ?: null,
+        ]);
+
+        $this->reset('toggleBirthday');
 
         session()->flash('message', 'Has been updated phone successfull.');
     }
