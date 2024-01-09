@@ -27,4 +27,8 @@
         </div>
         <button type="submit" class="rounded bg-gray-800 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600 {{ $tempUrl ?: 'hidden' }}">Submit</button>
     </form>
+
+    <div class="py-2 flex justify-center" x-data="{ name: '{{ Auth::user()->name }}' }" x-on:update-name.window="name = $event.detail.name">
+        <label for="name" class="text-medium" x-text="name"></label>
+    </div>
 </div>
