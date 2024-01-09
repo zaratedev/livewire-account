@@ -3,6 +3,8 @@
 ## Livewire Account
 
 This app is an example for login/register of users and update account fields using Laravel Livewire V3 and Alpine JS.
+![Screenshot 2024-01-09 at 13 18 53](https://github.com/zaratedev/livewire-account/assets/29809845/36924c24-4922-4561-a10c-119c008caaeb)
+
 
 ## Use
 You can test this app on https://enigmatic-mesa-53312-4d418eced529.herokuapp.com/
