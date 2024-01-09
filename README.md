@@ -14,9 +14,9 @@ You can test this app on https://enigmatic-mesa-53312-4d418eced529.herokuapp.com
 - Update fields name, phone, gender, city ...
 - Using Pikaday Library for update bitrhday field
 
-Implement Laravel Breeze for authentication, use Laravel Presentable for create the avatar function and retrieved the url of image user, also implement Livewire Events using Alpine for listener when update avatar and change the image in the navbar.
+Implemented Laravel Breeze for authentication, used Laravel Presentable to create the avatar function and retrieved the user's URL from the image, also implemented Livewire Events using Alpine for the listener when updating the avatar and changing the image in the navigation bar.
 
-For update fields account create a Livewire Component for edit fields separately, with a button for enable the input to edit and show other button for submit and save user data.
+To update fields, create a Livewire component to edit fields separately, with a button to enable input for editing and display another button to submit and save user data.
 
 ## Packages
 Packages using in this app:
