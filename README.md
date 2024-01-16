@@ -7,7 +7,6 @@ This app is an example for login/register of users and update account fields usi
 
 
 ## Use
-You can test this app on https://enigmatic-mesa-53312-4d418eced529.herokuapp.com/
 
 - Login / Register (Laravel Breeze)
 - Update avatar
